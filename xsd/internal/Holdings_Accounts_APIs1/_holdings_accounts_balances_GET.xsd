@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:BankingDemo_ns="http://www.convertigo.com/convertigo/projects/BankingDemo" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/BankingDemo">
+    <xsd:element name="Holdings_Accounts_APIs1___holdings_accounts_balances_GET" type="BankingDemo_ns:Holdings_Accounts_APIs1___holdings_accounts_balances_GETRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="Holdings_Accounts_APIs1___holdings_accounts_balances_GETResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="BankingDemo_ns:Holdings_Accounts_APIs1___holdings_accounts_balances_GETResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="Holdings_Accounts_APIs1___holdings_accounts_balances_GETResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="BankingDemo_ns:Holdings_Accounts_APIs1___holdings_accounts_balances_GETResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1___holdings_accounts_balances_GETRequestData">
+        <xsd:sequence>
+            <xsd:element name="accountId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="customerId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The identifier of the customer</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The identifier of the customer
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="productId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The identifier of the product</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The identifier of the product
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="currencyId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="limitReferenceId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The identifier of the limit reference</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The identifier of the limit reference
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="page_size" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The total number of records per page</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The total number of records per page
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="page_start" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>The record from which the response should be displayed</xsd:appinfo>
+                    <xsd:documentation><![CDATA[The record from which the response should be displayed
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="page_token" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>Unique id expected to get as part of response from t24 on every enquiry request.</xsd:appinfo>
+                    <xsd:documentation><![CDATA[Unique id expected to get as part of response from t24 on every enquiry request.
+]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="credentials" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="companyId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_statusType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="code" type="xsd:short"/>
+                <xsd:attribute name="text" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_headers_headerType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="value" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_headersType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="header" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_headers_headerType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_responseHeaders_headerType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="name" type="xsd:string"/>
+                <xsd:attribute name="value" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_responseHeadersType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="header" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_responseHeaders_headerType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfoType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="url" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="status" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_statusType"/>
+            <xsd:element minOccurs="0" name="headers" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_headersType"/>
+            <xsd:element minOccurs="0" name="responseHeaders" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfo_responseHeadersType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_body_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="accountId" type="xsd:short"/>
+            <xsd:element minOccurs="0" name="accountName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="clearedBalance" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="currencyId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ledgerBalance" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lockedAmount" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="productId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="useableBalance" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="workingBalance" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_bodyType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="object" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_body_objectType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_header_auditType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="T24_time" type="xsd:short"/>
+            <xsd:element minOccurs="0" name="requestParse_time" type="xsd:byte"/>
+            <xsd:element minOccurs="0" name="responseParse_time" type="xsd:byte"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_headerType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="audit" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_header_auditType"/>
+            <xsd:element minOccurs="0" name="page_size" type="xsd:byte"/>
+            <xsd:element minOccurs="0" name="page_start" type="xsd:byte"/>
+            <xsd:element minOccurs="0" name="page_token" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="total_size" type="xsd:byte"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="body" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_bodyType"/>
+            <xsd:element minOccurs="0" name="header" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_object_headerType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Holdings_Accounts_APIs1___holdings_accounts_balances_GETResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="HttpInfo" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_HttpInfoType"/>
+            <xsd:element minOccurs="0" name="object" type="BankingDemo_ns:Holdings_Accounts_APIs1__holdings_accounts_balances_GET_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="BankingDemo_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="BankingDemo_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="BankingDemo_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

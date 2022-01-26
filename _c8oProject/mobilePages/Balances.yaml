@@ -1,0 +1,217 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	
+        	getNow () {
+        	    return new Date().toLocaleDateString();
+        	}
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-balances
+title: Title for Balances
+↓UseSharedComponent [mobile.components.UIUseShared-1580142363741]: 
+  sharedcomponent: BankingDemo.MobileApplication.Application.Header_V2
+  ↓Title [mobile.components.UIControlVariable-1580142363744]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Balances'
+  ↓SubTitle [mobile.components.UIControlVariable-1580142363747]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.accountName"}
+  ↓SubLine [mobile.components.UIControlVariable-1580142363750]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Balance au ' + getNow()
+  ↓Resume [mobile.components.UIControlVariable-1580142363753]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: |
+            'script:listen([''BankingDemo.GetAccountDetails''])?.Balances?.object[1]?.clearedBalance ? 
+            	listen([''BankingDemo.GetAccountDetails''])?.Balances?.object[1]?.clearedBalance  +  '' '' +
+            	listen([''BankingDemo.GetAccountDetails''])?.Balances?.object[1]?.currencyId
+            :
+            	'''''
+↓Content [mobile.components.UIDynamicElement-1580142370685]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓ListContainer [mobile.components.UIDynamicElement-1580232209285]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓ListItem [mobile.components.UIDynamicElement-1580232215157]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Paragraph [mobile.components.UIDynamicElement-1580232234802]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1580232246523]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Cleared Balance
+      ↓H2 [mobile.components.UIDynamicElement-1580232240004]: 
+        beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
+        ↓Text [mobile.components.UIText-1580232249230]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.clearedBalance"}
+        ↓Text1 [mobile.components.UIText-1580232563267]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'plain: '
+        ↓Text11 [mobile.components.UIText-1580232577126]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.currencyId"}
+    ↓ListItem1 [mobile.components.UIDynamicElement-1580232332149]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Paragraph [mobile.components.UIDynamicElement-1580232332152]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1580232332155]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Ledger Balance
+      ↓H2 [mobile.components.UIDynamicElement-1580232332158]: 
+        beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
+        ↓Text [mobile.components.UIText-1580232332161]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.ledgerBalance"}
+        ↓Text1 [mobile.components.UIText-1580232599580]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'plain: '
+        ↓Text11 [mobile.components.UIText-1580232599583]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.currencyId"}
+    ↓ListItem2 [mobile.components.UIDynamicElement-1580232335649]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Paragraph [mobile.components.UIDynamicElement-1580232335652]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1580232335655]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Locked Amount
+      ↓H2 [mobile.components.UIDynamicElement-1580232335658]: 
+        beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
+        ↓Text [mobile.components.UIText-1580232335661]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.lockedAmount"}
+        ↓Text1 [mobile.components.UIText-1580232602826]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'plain: '
+        ↓Text11 [mobile.components.UIText-1580232602829]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.currencyId"}
+    ↓ListItem3 [mobile.components.UIDynamicElement-1580232337057]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Paragraph [mobile.components.UIDynamicElement-1580232337060]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1580232337063]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Usable Balance
+      ↓H2 [mobile.components.UIDynamicElement-1580232337066]: 
+        beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
+        ↓Text [mobile.components.UIText-1580232337069]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.useableBalance"}
+        ↓Text1 [mobile.components.UIText-1580232606077]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'plain: '
+        ↓Text11 [mobile.components.UIText-1580232606080]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.currencyId"}
+    ↓ListItem4 [mobile.components.UIDynamicElement-1580232338929]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Paragraph [mobile.components.UIDynamicElement-1580232338932]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1580232338935]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Working Balance
+      ↓H2 [mobile.components.UIDynamicElement-1580232338938]: 
+        beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
+        ↓Text [mobile.components.UIText-1580232338941]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.workingBalance"}
+        ↓Text1 [mobile.components.UIText-1580232610312]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'plain: '
+        ↓Text11 [mobile.components.UIText-1580232610315]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.GetAccountDetails'])?.Balances?.object[1]?.currencyId"}
+↓PageEvent [mobile.components.UIPageEvent-1580142802337]: 
+  viewEvent: onWillEnter
+  ↓If [mobile.components.UIDynamicAction-1580235247481]: 
+    beanData: '{"ionBean":"IfAction","condition":"script:this.navParams.data.length != undefined"}'
+    ↓ClearDataSource [mobile.components.UIDynamicAction-1643034164344]: 
+      beanData: '{"ionBean":"ClearDataSourceAction","requestables":"source:{\"filter\":\"Sequence\",\"project\":\"BankingDemo\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"BankingDemo.GetAccountDetails\",\"marker\":\"\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+      ↓CallSequence [mobile.components.UIDynamicAction-1580142811150]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:BankingDemo.GetAccountDetails"}'
+        ↓accountId [mobile.components.UIControlVariable-1580142827930]: 
+          comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.navParams.data ? this.navParams.data:'10995'
+        ↓__stub [mobile.components.UIControlVariable-1643034439821]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:true

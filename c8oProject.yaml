@@ -1,0 +1,24 @@
+↑convertigo: 7.9.0.m006
+↓BankingDemo [core.Project]: 
+  comment: Banking Demo
+  corsOrigin: =Origin
+  version: 1.0
+  ↓Holdings_Accounts_APIs1 [connectors.HttpConnector]: 🗏 connectors/Holdings_Accounts_APIs1.yaml
+  ↓PSD_II_API_for_detailed_account_information_retrieval [connectors.HttpConnector]: 🗏 connectors/PSD_II_API_for_detailed_account_information_retrieval.yaml
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓GetAccountDetails [sequences.GenericSequence]: 🗏 sequences/GetAccountDetails.yaml
+  ↓ListAccounts [sequences.GenericSequence]: 🗏 sequences/ListAccounts.yaml
+  ↓UrlMapper [core.UrlMapper]: 🗏 urlMapper.yaml
+  ↓lib_AmazonLEX_reference [references.ProjectSchemaReference]: 
+    projectName: lib_AmazonLEX=https://github.com/convertigo/c8oprj-lib-amazonlex.git:branch=7.7.0
+  ↓Project_reference1 [references.ProjectSchemaReference]: 
+    projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip
+  ↓MobileApplication [core.MobileApplication]: 
+    comment: Describes the mobile application global properties
+    endpoint: https://raiffeisen.convertigo.net/convertigo
+    splashRemoveMode: beforeUpdate
+    ↓Android [mobileplatforms.Android]: 
+      comment: Android platform
+    ↓iOS [mobileplatforms.IOs]: 
+      comment: iOS platform
+    ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml

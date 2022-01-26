@@ -1,0 +1,306 @@
+componentScriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_AppImport*/
+        /*End_c8o_AppImport*/
+        /*Begin_c8o_AppDeclaration*/
+        	/*End_c8o_AppDeclaration*/
+        /*Begin_c8o_AppConstructor*/
+        		/*End_c8o_AppConstructor*/
+        /*Begin_c8o_AppInitialization*/
+                        /* Uncomment the following lines to enable the i18n feature.
+                         * You should add a json per language in the assets/i18n folder. */
+                        translate.setDefaultLang('en');
+                        translate.use(translate.getBrowserLang());
+                        
+                        /* Uncomment the following lines to enable the custom status bar color. */
+                        // statusBar.overlaysWebView(false);
+                        // statusBar.backgroundColorByHexString("#000000");
+                        // statusBar.styleBlackOpaque();
+        			/*End_c8o_AppInitialization*/
+        /*Begin_c8o_AppFunction*/
+        	/*End_c8o_AppFunction*/
+        
+tplProjectName: mobilebuilder_tpl_7_9_0
+↓Menu [mobile.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓KeyPadEntry [mobile.components.UIActionStack-1580230886912]: 🗏 mobileSharedActions/KeyPadEntry.yaml
+↓SetFocused [mobile.components.UIActionStack-1580234610076]: 🗏 mobileSharedActions/SetFocused.yaml
+↓Header_V2 [mobile.components.UISharedComponent-1580150977873]: 🗏 mobileSharedComponents/Header_V2.yaml
+↓Chat [mobile.components.PageComponent-1500538678074]: 🗏 mobilePages/Chat.yaml
+↓Main [mobile.components.PageComponent-1579885927871]: 🗏 mobilePages/Main.yaml
+↓Accounts [mobile.components.PageComponent-1580035407151]: 🗏 mobilePages/Accounts.yaml
+↓Welcome [mobile.components.PageComponent-1580131798451]: 🗏 mobilePages/Welcome.yaml
+↓Balances [mobile.components.PageComponent-1580142349999]: 🗏 mobilePages/Balances.yaml
+↓KeyPad [mobile.components.PageComponent-1580150924562]: 🗏 mobilePages/KeyPad.yaml
+↓Theme [mobile.components.UITheme-1491635018260]: 
+  comment: Global color themes can be customized here
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '// Ionic Variables and Theming. For more info, please see:
+          // http://ionicframework.com/docs/v2/theming/ 
+          $font-path: "../assets/fonts";
+          
+          @import "ionic.globals";
+          
+          
+          // Shared Variables
+          // --------------------------------------------------
+          // To customize the look and feel of this app, you can override
+          // the Sass variables found in Ionic''s source scss files.
+          // To view all the possible Ionic variables, see:
+          // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+          
+          
+          
+          
+          // Named Color Variables
+          // --------------------------------------------------
+          // Named colors makes it easy to reuse colors on various components.
+          // It''s highly recommended to change the default colors
+          // to match your app''s branding. Ionic uses a Sass map of
+          // colors so you can add, rename and remove colors as needed.
+          // The "primary" color is the only required color in the map.
+          
+          $colors: (
+                  primary:    #112242,
+                  secondary:  #b4c72e,
+                  danger:     #f53d3d,
+                  light:      #f4f4f4,
+                  dark:       #222,
+                  darkSlateBlue: #1c3563,
+                  darkBlueGrey: #112242,
+                  sickGreen: (
+                  	base: #b4c72e,
+                  	contrast: #112242
+                  ),
+                  white: #e2e2e2
+          );
+          
+          
+          // App iOS Variables
+          // --------------------------------------------------
+          // iOS only Sass variables can go here
+          
+          
+          
+          
+          // App Material Design Variables
+          // --------------------------------------------------
+          // Material Design only Sass variables can go here
+          
+          
+          
+          
+          // App Windows Variables
+          // --------------------------------------------------
+          // Windows only Sass variables can go here
+          
+          
+          
+          
+          // App Theme
+          // --------------------------------------------------
+          // Ionic apps can have different themes applied, which can
+          // then be future customized. This import comes last
+          // so that the above variables are used and Ionic''s
+          // default are overridden.
+          
+          @import "ionic.theme.default";
+          
+          
+          // Ionicons
+          // --------------------------------------------------
+          // The premium icon font for Ionic. For more info, please see:
+          // http://ionicframework.com/docs/v2/ionicons/
+          
+          @import "ionic.ionicons";
+          
+          
+          // Fonts
+          // --------------------------------------------------
+          
+          @import "roboto";
+          @import "noto-sans";'
+↓Style [mobile.components.UIStyle-1491635462437]: 
+  comment: You can add some global application styles here
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.content {
+          	/* add some styling CSS rules here for the body of your app
+          	   for example,
+          	 		background-color: your color; 
+          	 		background-image: url(some background image);
+          	*/
+          }
+          
+          .toolbar-background {
+          	/* add some styling CSS rules here for the Headers and Footers
+          	   for example,
+          	 		background-color: your color; 
+          	*/
+          }
+          
+          ion-header {
+          	background: rgb(28,53,99);
+          	background: linear-gradient(0deg, rgba(28,53,99,1) 0%, rgba(17,34,66,1) 72%);
+          }
+          
+          .tabbar > a[aria-selected=true]  {
+          	border-top-left-radius: 40px;
+          	border-top-right-radius: 40px;
+              background-color:  #b4c72e;
+              margin-top: -10px;
+              height: 70px
+          }
+          
+          .tabbar > a {
+          	margin-left:10px;
+          	margin-right:10px
+          }
+          '
+↓ShowGrids [mobile.components.UIStyle-1579886819838]: 
+  comment: Enable this to show grid guidelines
+  isEnabled: false
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.content {
+          	/* add some styling CSS rules here for the body of your app
+          	   for example,
+          	 		background-color: your color; 
+          	 		background-image: url(some background image);
+          	*/
+          }
+          
+          .toolbar-background {
+          	/* add some styling CSS rules here for the Headers and Footers
+          	   for example,
+          	 		background-color: your color; 
+          	*/
+          }
+          
+          ion-grid {
+          	border: 1px solid red;
+          }
+          
+          ion-row {
+          	border: 1px solid blue;
+          }
+          
+          ion-col {
+          	border: 1px solid green;
+          }'
+↓ChatArea [mobile.components.UIStyle-1580217986384]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.chatarea {
+          	background: rgb(28,53,99);
+          	background: linear-gradient(0deg, rgba(28,53,99,1) 0%, rgba(17,34,66,1) 72%);
+          }'
+↓ChatBox [mobile.components.UIStyle-1580218000187]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.chatbox {
+          	.message {
+          		padding: 10px !important;
+          		margin-bottom: 4px !important;
+          		
+          		.fromUser {
+          			text-align: right;
+          			padding-bottom: 12px;
+          			color: color($colors, white);
+          		}
+          		
+          		.toUser {
+          			text-align: left;
+          			padding-left: 0px;
+          			padding-bottom: 12px;
+          			margin-left: -4px;
+          			color: color($colors, white);
+          		}
+          		
+          		.toMsg {
+          			position: relative;
+          			border-radius: 0 8px 8px 8px !important;
+          			background-color: color($colors, sickGreen);
+          			padding: 10px 20px;
+          			color: color($colors, darkBlueGrey);
+          			display: inline-block;
+          			white-space: normal;
+          		}
+          		
+          	 	.toMsg::after {
+          			position: absolute;
+          			bottom: 100%;
+          			left: 0;
+          			content: " ";
+          			height: 0;
+          			width: 0;
+          			border-style: solid;
+          		}
+          	
+          		.toMsg::after {
+          			border-color: transparent transparent color($colors, sickGreen) color($colors, sickGreen);
+          			border-width: 6px;
+          		}
+          			
+          		.fromMsg {
+          			position: relative;
+          			border-radius: 8px 0 8px 8px !important;
+          			background-color: rgba(255, 255, 255, 1);
+          			padding: 10px 20px;
+          			color: color($colors, darkBlueGrey);
+          			display: inline-block;
+          			white-space: normal;
+          		}
+          		
+          		.fromMsg::after {
+          			position: absolute;
+          			bottom: 100%;
+          			right: 0;
+          			content: " ";
+          			height: 0;
+          			width: 0;
+          			border-style: solid;
+          		}
+          	
+          		.fromMsg::after {
+          			border-color: transparent rgba(255, 255, 255, 1) rgba(255, 255, 255, 1) transparent;
+          			border-width: 6px;
+          		}
+          	
+          	}
+          }'
+↓KeypadGrid [mobile.components.UIStyle-1580220870800]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '.keypad-grid {
+          	ion-col {
+          		margin: 4px;
+          		border: 1px solid color($colors, darkBlueGrey);
+          		background-color: color($colors, darkSlateBlue);
+          		color : #fff;
+          		text-align: center;
+          		padding: 2.5rem 1rem;
+          		font-size: 2rem;
+          	}
+          }'

@@ -1,0 +1,223 @@
+↑isRoot: true
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	oToString(o) {
+                return (typeof o === "object")?JSON.stringify(o):o;
+            }
+            
+            page_c8o_log(level, msg, data) {
+                this.c8o.log[level](msg + this.oToString(data));
+            }
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-welcome
+title: Title for Welcome
+↓Content [mobile.components.UIDynamicElement-1580131810850]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Style [mobile.components.UIStyle-1580131852086]: 
+    styleContent: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '	background: rgb(28,53,99);
+            	background: linear-gradient(0deg, rgba(28,53,99,1) 0%, rgba(17,34,66,1) 72%);
+            '
+  ↓TextFormat [mobile.components.UIDynamicElement-1580133239321]: 
+    beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+    tagName: div
+    ↓Image [mobile.components.UIDynamicElement-1580132861155]: 
+      beanData: |
+        '{
+         "ionBean": "Image",
+         "url": "script:''assets\/images\/logoFr@2x.png''",
+         "width": "plain:70%"
+        }'
+      selfClose: true
+      tagName: img
+      ↓Style [mobile.components.UIStyle-1580133423964]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	margin-top: 100px;
+                '
+  ↓Grid [mobile.components.UIDynamicElement-1580133195956]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:60%"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1580133200868]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1580133204619]: 
+        beanData: '{"ionBean":"GridCol","AlignItemsCenter":"plain:align-self-center"}'
+        tagName: ion-col
+        ↓TextFormat [mobile.components.UIDynamicElement-1580132957126]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓H1 [mobile.components.UIDynamicElement-1580132983910]: 
+            beanData: |
+              '{
+               "ionBean": "Heading1",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:light"
+              }'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1580132990308]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Bienvenue
+          ↓Button [mobile.components.UIDynamicElement-1580133032554]: 
+            beanData: '{"ionBean":"Button","IonColor":"plain:secondary"}'
+            tagName: button
+            ↓Text [mobile.components.UIText-1580133054732]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Je me connecte
+            ↓Style [mobile.components.UIStyle-1580133085043]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	border-radius: 20px;
+                      	color: black
+                      '
+            ↓Event [mobile.components.UIControlEvent-1580133484037]: 
+              ↓init_Fingerprint [mobile.components.UICustomAction-1580150788758]: 
+                actionValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                        		page["fingerprint"] = page.getInstance(FingerprintAIO);
+                        		page["fingerprint"].isAvailable()
+                        		.then((result: any) => {
+                        //		      page.c8o.log.debug(''is Fingerprint available? ''+ result);
+                        		      this.page_c8o_log(''debug'', ''is Fingerprint available? '', result);
+                        		      let fingerprintOptions = {
+                        		              title: ''My Raiffeisen banking'',
+                        		              subtitle: ''Brewed by Convertigo'',
+                        		              //description: ''DESCRIPTION'',
+                        		              clientId: ''C8O-fpt-demo'',
+                        		              clientSecret: ''password'',
+                        		              disableBackup: true
+                        		      };
+                        		      page["fingerprint"].show(fingerprintOptions)
+                        		      .then((result: any) => {
+                        //		          page.c8o.log.debug(''RESULT: '' + result);
+                        		          this.page_c8o_log(''debug'', ''RESULT: '', result);
+                        		          let res = (result == ''biometric_success'' || result == ''Success'') ? ''success'' : ''fail''; 
+                        		          resolve(this.oToString(res));
+                        		      })
+                        		      .catch((error: any) => {
+                        //		          page.c8o.log.debug(''ERROR: '' + error);
+                        		          this.page_c8o_log(''debug'', ''ERROR: '', error);
+                        		          resolve(this.oToString(error));
+                        		      });
+                        		})
+                        		.catch((error: any) => {
+                        //		    page.c8o.log.debug(''Fingerprint available error: ''+ error);
+                        		    this.page_c8o_log(''debug'', ''Fingerprint available error: '', error);
+                        		    resolve(this.oToString(error));
+                        		});
+                        //		resolve();
+                        '
+                cordova_plugins: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                        - com.twinsoft.convertigo.beans.common.XMLVector: 
+                          - java.lang.String: 
+                            - ↑value: cordova-plugin-fingerprint-aio
+                          - java.lang.String: 
+                            - ↑value: 3.0.1
+                          - java.lang.String: 
+                            - ↑value: '{}'
+                module_ng_providers: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                        - com.twinsoft.convertigo.beans.common.XMLVector: 
+                          - java.lang.String: 
+                            - ↑value: FingerprintAIO
+                module_ts_imports: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                        - com.twinsoft.convertigo.beans.common.XMLVector: 
+                          - java.lang.String: 
+                            - ↑value: FingerprintAIO, FingerprintOptions
+                          - java.lang.String: 
+                            - ↑value: '@ionic-native/fingerprint-aio'
+                package_dependencies: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                        - com.twinsoft.convertigo.beans.common.XMLVector: 
+                          - java.lang.String: 
+                            - ↑value: '@ionic-native/fingerprint-aio'
+                          - java.lang.String: 
+                            - ↑value: 4
+                page_ts_imports: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                    - com.twinsoft.convertigo.beans.common.XMLVector: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                        - com.twinsoft.convertigo.beans.common.XMLVector: 
+                          - java.lang.String: 
+                            - ↑value: FingerprintAIO, FingerprintOptions
+                          - java.lang.String: 
+                            - ↑value: '@ionic-native/fingerprint-aio'
+                ↓SetGlobal [mobile.components.UIDynamicAction-1580150788761]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:fpt",
+                     "Value": "script:out"
+                    }'
+                  ↓IfElse [mobile.components.UIDynamicIf-1580150788764]: 
+                    beanData: '{"ionBean":"IfElseAction","condition":"script:this.global.fpt == ''success''"}'
+                    ↓Toast [mobile.components.UIDynamicAction-1580150788767]: 
+                      beanData: |
+                        '{
+                         "ionBean": "ToastAction",
+                         "message": "plain:Authentification réussie",
+                         "duration": "plain:1500"
+                        }'
+                      ↓RootPage [mobile.components.UIDynamicAction-1580150788770]: 
+                        beanData: '{"ionBean":"RootPageAction","page":"plain:BankingDemo.MobileApplication.Application.Main"}'
+                    ↓Else_Handler [mobile.components.UIActionElseEvent-1580150788773]: 
+                      comment: Desktop or Finger Auth failed
+                      ↓Toast [mobile.components.UIDynamicAction-1580150788776]: 
+                        beanData: |
+                          '{
+                           "ionBean": "ToastAction",
+                           "message": "plain:Authentication manuelle",
+                           "duration": "plain:1500"
+                          }'
+                        ↓RootPage [mobile.components.UIDynamicAction-1580150788779]: 
+                          beanData: '{"ionBean":"RootPageAction","page":"plain:BankingDemo.MobileApplication.Application.KeyPad"}'

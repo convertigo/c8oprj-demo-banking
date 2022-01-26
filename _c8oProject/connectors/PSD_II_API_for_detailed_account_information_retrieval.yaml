@@ -1,0 +1,52 @@
+authenticationType: Basic
+baseDir: /api/v1.0.0
+https: true
+port: 443
+server: api.temenos.com
+↓_party_accounts__accountId__GET [transactions.JsonHttpTransaction]: 
+  comment: Retrieves detailed customer account information
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /party/accounts/{accountId}
+  ↓accountId [variables.RequestableHttpVariable-1579702614592]: 
+    comment: Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN & BBAN
+    description: Identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId. Accepts both IBAN & BBAN
+    required: true
+    value: 
+  ↓withBalance [variables.RequestableHttpVariable-1579702614594]: 
+    comment: Identifies whether balance information needs to be retrieved. Possible values YES or NO. Default is NO.
+    description: Identifies whether balance information needs to be retrieved. Possible values YES or NO. Default is NO.
+    httpName: withBalance
+  ↓page_size [variables.RequestableHttpVariable-1579702614596]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579702614598]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579702614600]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓__header_credentials [variables.RequestableHttpVariable-1579702614602]: 
+  ↓__header_companyId [variables.RequestableHttpVariable-1579702614604]: 

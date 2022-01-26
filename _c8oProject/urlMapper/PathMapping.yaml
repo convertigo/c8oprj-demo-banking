@@ -1,0 +1,3 @@
+path: /accounts
+↓GetOperation [rest.GetOperation]: 
+  targetRequestable: BankingDemo.ListAccounts

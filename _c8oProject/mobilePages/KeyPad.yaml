@@ -1,0 +1,787 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	
+        	getNow () {
+        	    return new Date().toLocaleDateString();
+        	}
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-keypad
+title: Title for Balances1
+↓UseSharedComponent [mobile.components.UIUseShared-1580150924816]: 
+  sharedcomponent: BankingDemo.MobileApplication.Application.Header_V2
+  ↓Title [mobile.components.UIControlVariable-1580150924819]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Login'
+  ↓SubTitle [mobile.components.UIControlVariable-1580150924822]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: 'script:''Compte: '' + navParams.data'
+  ↓SubLine [mobile.components.UIControlVariable-1580150924825]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Balance au ' + getNow()
+  ↓Resume [mobile.components.UIControlVariable-1580150924828]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Connexion'
+  ↓Type [mobile.components.UIControlVariable-1580151367932]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'smallHeader'
+  ↓Chart [mobile.components.UIControlVariable-1580151486341]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:''
+↓Content [mobile.components.UIDynamicElement-1580150924831]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓ContractNumber [mobile.components.UIDynamicElement-1580220138197]: 
+    beanData: '{"ionBean":"GenericItem"}'
+    tagName: ion-item
+    ↓Label [mobile.components.UIDynamicElement-1580220138200]: 
+      beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
+      tagName: ion-label
+      ↓Text [mobile.components.UIText-1580220138203]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Contract number
+    ↓TextInput [mobile.components.UIDynamicElement-1580220138206]: 
+      beanData: |
+        '{
+         "ionBean": "Input",
+         "Readonly": "plain:true",
+         "Type": "script:(this.global.showNbr === true) ? ''text''  : ''password''"
+        }'
+      identifier: contract
+      tagName: ion-input
+      ↓Event [mobile.components.UIControlEvent-1580234410742]: 
+        ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580234774905]: 
+          beanData: '{"ionBean":"InvokeAction"}'
+          stack: BankingDemo.MobileApplication.Application.SetFocused
+          ↓inputField [mobile.components.UIControlVariable-1580234791705]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:contract
+    ↓Button [mobile.components.UIDynamicElement-1580220138209]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonClear": "plain:clear",
+         "IconOnly": "plain:icon-only"
+        }'
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1580220138212]: 
+        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showNbr === true) ? ''eye-off''  : ''eye''"}'
+        tagName: ion-icon
+      ↓Attr [mobile.components.UIAttribute-1580220138215]: 
+        attrName: 
+        attrValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:item-end
+      ↓Style [mobile.components.UIStyle-1580220138218]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	font-size: 1.4rem !important;
+                	position: relative !important;
+                	top: 18px !important;
+                	margin: 0 auto !important;
+                '
+      ↓Event [mobile.components.UIControlEvent-1580220138221]: 
+        ↓Log [mobile.components.UIDynamicAction-1580220138224]: 
+          beanData: |
+            '{
+             "ionBean": "LogAction",
+             "message": "script:this.global.showNbr === undefined",
+             "level": "plain:warn"
+            }'
+          ↓SetGlobal [mobile.components.UIDynamicAction-1580220138227]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:showNbr",
+               "Value": "script:(this.global.showNbr === undefined) ? true : !this.global.showNbr"
+              }'
+  ↓Password [mobile.components.UIDynamicElement-1580220212492]: 
+    beanData: '{"ionBean":"GenericItem"}'
+    tagName: ion-item
+    ↓Label [mobile.components.UIDynamicElement-1580220212495]: 
+      beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
+      tagName: ion-label
+      ↓Text [mobile.components.UIText-1580220212498]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Password:
+    ↓TextInput [mobile.components.UIDynamicElement-1580220212501]: 
+      beanData: |
+        '{
+         "ionBean": "Input",
+         "Readonly": "plain:true",
+         "Type": "script:(this.global.showPwd === true) ? ''text''  : ''password''"
+        }'
+      identifier: pwd
+      tagName: ion-input
+      ↓Event [mobile.components.UIControlEvent-1580234817462]: 
+        ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580234817465]: 
+          beanData: '{"ionBean":"InvokeAction"}'
+          stack: BankingDemo.MobileApplication.Application.SetFocused
+          ↓inputField [mobile.components.UIControlVariable-1580234817468]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:pwd
+    ↓Button [mobile.components.UIDynamicElement-1580220212504]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonClear": "plain:clear",
+         "IconOnly": "plain:icon-only"
+        }'
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1580220212507]: 
+        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showPwd === true) ? ''eye-off''  : ''eye''"}'
+        tagName: ion-icon
+      ↓Attr [mobile.components.UIAttribute-1580220212510]: 
+        attrName: 
+        attrValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:item-end
+      ↓Style [mobile.components.UIStyle-1580220212513]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	font-size: 1.4rem !important;
+                	position: relative !important;
+                	top: 18px !important;
+                	margin: 0 auto !important;
+                '
+      ↓Event [mobile.components.UIControlEvent-1580220212516]: 
+        ↓Log [mobile.components.UIDynamicAction-1580220212519]: 
+          beanData: |
+            '{
+             "ionBean": "LogAction",
+             "message": "script:this.global.showPwd === undefined",
+             "level": "plain:warn"
+            }'
+          ↓SetGlobal [mobile.components.UIDynamicAction-1580220212522]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:showPwd",
+               "Value": "script:(this.global.showPwd === undefined) ? true : !this.global.showPwd"
+              }'
+  ↓STT [mobile.components.UIDynamicElement-1580220443890]: 
+    beanData: '{"ionBean":"GenericItem"}'
+    tagName: ion-item
+    ↓Button [mobile.components.UIDynamicElement-1580220443902]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonShape": "plain:full",
+         "IonClear": "plain:clear",
+         "IconPosition": "plain:icon-start"
+        }'
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1580220443905]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:volume-up"}'
+        tagName: ion-icon
+      ↓Event [mobile.components.UIControlEvent-1580220443914]: 
+      ↓Text [mobile.components.UIText-1580220482479]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Activer la vocalisation
+  ↓KeypadGrid [mobile.components.UIDynamicElement-1580220651914]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓GridRow1 [mobile.components.UIDynamicElement-1580220655706]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1580220682691]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text [mobile.components.UIText-1580222552805]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[0]
+        ↓Attr [mobile.components.UIAttribute-1580230739371]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[0] != '' '') ? ''tappable'' : null'
+        ↓Event [mobile.components.UIControlEvent-1580231090527]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580231105063]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580231287075]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[0]
+            ↓inputField [mobile.components.UIControlVariable-1580231431984]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+      ↓GridCol1 [mobile.components.UIDynamicElement-1580220687260]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229292054]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[1]
+        ↓Event [mobile.components.UIControlEvent-1580232016174]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232016177]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232016180]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[1]
+            ↓inputField [mobile.components.UIControlVariable-1580233088971]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236249955]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[1] != '' '') ? ''tappable'' : null'
+      ↓GridCol2 [mobile.components.UIDynamicElement-1580220690259]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229294962]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[2]
+        ↓Event [mobile.components.UIControlEvent-1580232018778]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232018781]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232018784]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[2]
+            ↓inputField [mobile.components.UIControlVariable-1580233257846]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236265262]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[2] != '' '') ? ''tappable'' : null'
+      ↓GridCol3 [mobile.components.UIDynamicElement-1580220692836]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229297682]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[3]
+        ↓Event [mobile.components.UIControlEvent-1580232021959]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232021962]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232021965]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[3]
+            ↓inputField [mobile.components.UIControlVariable-1580233268178]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236305818]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[3] != '' '') ? ''tappable'' : null'
+    ↓GridRow2 [mobile.components.UIDynamicElement-1580220672411]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1580220700350]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229301871]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[4]
+        ↓Event [mobile.components.UIControlEvent-1580232027206]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232027209]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232027212]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[4]
+            ↓inputField [mobile.components.UIControlVariable-1580233291987]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236333341]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[4] != '' '') ? ''tappable'' : null'
+      ↓GridCol1 [mobile.components.UIDynamicElement-1580220700353]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229304139]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[5]
+        ↓Event [mobile.components.UIControlEvent-1580232029295]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232029298]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232029301]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[5]
+            ↓inputField [mobile.components.UIControlVariable-1580233298948]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236348460]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[5] != '' '') ? ''tappable'' : null'
+      ↓GridCol2 [mobile.components.UIDynamicElement-1580220700356]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229306135]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[6]
+        ↓Event [mobile.components.UIControlEvent-1580232031603]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232031606]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232031609]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[6]
+            ↓inputField [mobile.components.UIControlVariable-1580233305031]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236373804]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[6] != '' '') ? ''tappable'' : null'
+      ↓GridCol3 [mobile.components.UIDynamicElement-1580220700359]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229308386]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[7]
+        ↓Event [mobile.components.UIControlEvent-1580232033622]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232033625]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232033628]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[7]
+            ↓inputField [mobile.components.UIControlVariable-1580233310484]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236392124]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[7] != '' '') ? ''tappable'' : null'
+    ↓GridRow3 [mobile.components.UIDynamicElement-1580220675587]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1580222744053]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229312276]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[8]
+        ↓Event [mobile.components.UIControlEvent-1580232036837]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232036840]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232036843]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[8]
+            ↓inputField [mobile.components.UIControlVariable-1580233322309]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236414960]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[8] != '' '') ? ''tappable'' : null'
+      ↓GridCol1 [mobile.components.UIDynamicElement-1580222744059]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229314815]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[9]
+        ↓Event [mobile.components.UIControlEvent-1580232039176]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232039179]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232039182]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[9]
+            ↓inputField [mobile.components.UIControlVariable-1580233328928]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236433183]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[9] != '' '') ? ''tappable'' : null'
+      ↓GridCol2 [mobile.components.UIDynamicElement-1580222744065]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229316812]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[10]
+        ↓Event [mobile.components.UIControlEvent-1580232041730]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232041733]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232041736]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[10]
+            ↓inputField [mobile.components.UIControlVariable-1580233334101]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236613590]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[10] != '' '') ? ''tappable'' : null'
+      ↓GridCol3 [mobile.components.UIDynamicElement-1580222744071]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229319029]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[11]
+        ↓Event [mobile.components.UIControlEvent-1580232044298]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232044301]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232044304]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[11]
+            ↓inputField [mobile.components.UIControlVariable-1580233340009]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236630805]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[11] != '' '') ? ''tappable'' : null'
+    ↓GridRow4 [mobile.components.UIDynamicElement-1580220678067]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1580222746770]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229321826]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[12]
+        ↓Event [mobile.components.UIControlEvent-1580232047940]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232047943]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232047946]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[12]
+            ↓inputField [mobile.components.UIControlVariable-1580233347844]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236644117]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[12] != '' '') ? ''tappable'' : null'
+      ↓GridCol1 [mobile.components.UIDynamicElement-1580222746776]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229324170]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[13]
+        ↓Event [mobile.components.UIControlEvent-1580232050514]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232050517]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232050520]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[13]
+            ↓inputField [mobile.components.UIControlVariable-1580233352690]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236657540]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[13] != '' '') ? ''tappable'' : null'
+      ↓GridCol2 [mobile.components.UIDynamicElement-1580222746782]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229326931]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[14]
+        ↓Event [mobile.components.UIControlEvent-1580232053006]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232053009]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232053012]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[14]
+            ↓inputField [mobile.components.UIControlVariable-1580233357380]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236675556]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[14] != '' '') ? ''tappable'' : null'
+      ↓GridCol3 [mobile.components.UIDynamicElement-1580222746788]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Text1 [mobile.components.UIText-1580229329283]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.local.keys && this.local.keys[15]
+        ↓Event [mobile.components.UIControlEvent-1580232055221]: 
+          ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1580232055224]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: BankingDemo.MobileApplication.Application.KeyPadEntry
+            ↓keyValue [mobile.components.UIControlVariable-1580232055227]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.keys && this.local.keys[15]
+            ↓inputField [mobile.components.UIControlVariable-1580233363837]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.local.focusedInput || 'contract'
+        ↓Attr1 [mobile.components.UIAttribute-1580236686068]: 
+          attrName: '[attr.tappable]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: 'script:this.local.keys && (this.local.keys[15] != '' '') ? ''tappable'' : null'
+    ↓Attr [mobile.components.UIAttribute-1580220839536]: 
+      attrName: class
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:keypad-grid
+  ↓ButtonSet [mobile.components.UIDynamicElement-1580237495228]: 
+    beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+    tagName: ion-buttons
+    ↓Button [mobile.components.UIDynamicElement-1580237464859]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonShape": "plain:round",
+         "IonOutline": "plain:outline"
+        }'
+      tagName: button
+      ↓Text [mobile.components.UIText-1580237505021]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Effacer
+      ↓Event [mobile.components.UIControlEvent-1580238890867]: 
+        ↓DeleteInput [mobile.components.UICustomAction-1580238899291]: 
+          actionValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                  		page[page.local.focusedInput].value = '''';
+                  		resolve();
+                  '
+    ↓Button1 [mobile.components.UIDynamicElement-1580237558105]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonColor": "plain:sickGreen",
+         "IonShape": "plain:round"
+        }'
+      tagName: button
+      ↓Text [mobile.components.UIText-1580237558108]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Valider
+      ↓Event [mobile.components.UIControlEvent-1580238032302]: 
+        ↓IfElse [mobile.components.UIDynamicIf-1580238142858]: 
+          beanData: '{"ionBean":"IfElseAction","condition":"script:this.contract.value == ''123456'' && this.pwd.value == ''040475''"}'
+          ↓RootPage [mobile.components.UIDynamicAction-1580238103489]: 
+            beanData: '{"ionBean":"RootPageAction","page":"plain:BankingDemo.MobileApplication.Application.Main"}'
+          ↓Else_Handler [mobile.components.UIActionElseEvent-1580238146186]: 
+            ↓Toast [mobile.components.UIDynamicAction-1580238167619]: 
+              beanData: |
+                '{
+                 "ionBean": "ToastAction",
+                 "message": "plain:Echec d''authentification",
+                 "duration": "plain:1500",
+                 "position": "plain:top"
+                }'
+  ↓Div [mobile.components.UIDynamicElement-1580238586449]: 
+    beanData: '{"ionBean":"DivTag"}'
+    tagName: div
+    ↓Text [mobile.components.UIText-1580238357241]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:mot de passe oublié ?
+    ↓Style [mobile.components.UIStyle-1580238594737]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	text-align: center;
+              	font-weight: bold;
+              	color: color($colors, primary);
+              	margin-top: 15px;
+              '
+↓PageEvent [mobile.components.UIPageEvent-1580150924834]: 
+  ↓keyPad [mobile.components.UICustomAction-1580223604644]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		page.local.keys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " ", " ", " ", " ", " ", " "];
+            		page.local.shuffle = function(o) {for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);return o};
+            		page.local.keys = page.local.shuffle(page.local.keys);
+            		delete page.local.shuffle;
+            		page.c8o.log.debug(''page.local.keys: '' + page.local.keys);
+            		
+            		setTimeout(() => {
+            		    this[vars.setFocus].setFocus();
+            		    this.local.focusedInput = ''contract'';
+            		}, 150);
+            	    resolve();
+            '
+    ↓setFocus [mobile.components.UIControlVariable-1580232498502]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'contract'

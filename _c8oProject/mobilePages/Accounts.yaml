@@ -1,0 +1,68 @@
+segment: path-to-accounts
+title: Title for Accounts
+↓UseSharedComponent [mobile.components.UIUseShared-1580130480176]: 
+  sharedcomponent: BankingDemo.MobileApplication.Application.Header_V2
+  ↓Title [mobile.components.UIControlVariable-1580130480179]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:Comptes
+  ↓SubTitle [mobile.components.UIControlVariable-1580136796453]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:Bonjour Jean Marc Dupont
+  ↓SubLine [mobile.components.UIControlVariable-1580136796455]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Votre liste de comptes est affichée ci-dessous'
+  ↓Resume [mobile.components.UIControlVariable-1580136796457]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Chosissez un compte...'
+  ↓Type [mobile.components.UIControlVariable-1580219625750]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Chart'
+↓Content [mobile.components.UIDynamicElement-1580130501561]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓ListContainer [mobile.components.UIDynamicElement-1580133874334]: 
+    beanData: '{"ionBean":"List","Nolines":"plain:no-lines"}'
+    tagName: ion-list
+    ↓Directive [mobile.components.UIControlDirective-1580133926221]: 
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Sequence","project":"BankingDemo","input":"listen(['BankingDemo.ListAccounts'])?.accounts"}
+      ↓Button [mobile.components.UIDynamicElement-1580134278459]: 
+        beanData: '{"ionBean":"Button","ButtonType":"plain:ion-item"}'
+        tagName: button
+        ↓H1 [mobile.components.UIDynamicElement-1580133886656]: 
+          beanData: '{"ionBean":"Heading1"}'
+          tagName: h1
+          ↓Text [mobile.components.UIText-1580133907080]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Iteration","project":"BankingDemo","input":"item1580133926221"}
+        ↓Event [mobile.components.UIControlEvent-1580142482666]: 
+          ↓PushPage [mobile.components.UIDynamicAction-1580142490076]: 
+            beanData: |
+              '{
+               "ionBean": "PushPageAction",
+               "page": "plain:BankingDemo.MobileApplication.Application.Balances",
+               "data": "source:{\"filter\":\"Iteration\",\"project\":\"BankingDemo\",\"input\":\"item1580133926221\"}"
+              }'
+↓PageEvent [mobile.components.UIPageEvent-1580133789377]: 
+  ↓CallSequence [mobile.components.UIDynamicAction-1580133814815]: 
+    beanData: |
+      '{
+       "ionBean": "CallSequenceAction",
+       "requestable": "plain:BankingDemo.ListAccounts",
+       "cachePolicy": "plain:priority_local",
+       "cacheTtl": "plain:3600000"
+      }'

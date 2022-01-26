@@ -1,0 +1,7 @@
+path: /position/{accountId}
+↓GetOperation [rest.GetOperation]: 
+  targetRequestable: BankingDemo.GetAccountDetails
+  ↓accountId [rest.PathParameter-1579771130726]: 
+  ↓stub [rest.QueryParameter-1643120707930]: 
+    mappedVariableName: __stub
+    value: true

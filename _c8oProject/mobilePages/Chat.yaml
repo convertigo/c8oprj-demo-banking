@@ -1,0 +1,73 @@
+comment: My First Page as root page
+preloadPriority: high
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-chat
+title: First page
+↓UseSharedComponent [mobile.components.UIUseShared-1579886250123]: 
+  sharedcomponent: BankingDemo.MobileApplication.Application.Header_V2
+  ↓Title [mobile.components.UIControlVariable-1579886250126]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'Chat with us'
+  ↓SubTitle [mobile.components.UIControlVariable-1580212071490]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:''
+  ↓SubLine [mobile.components.UIControlVariable-1580212071492]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:''
+  ↓Resume [mobile.components.UIControlVariable-1580212071494]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:
+  ↓Type [mobile.components.UIControlVariable-1580212071498]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:'none'
+↓Content [mobile.components.UIDynamicElement-1489674805352]: 
+  beanData: '{"ionBean":"Content","IonPadding":"plain:false"}'
+  comment: Page content
+  tagName: ion-content
+  ↓UseSharedComponent [mobile.components.UIUseShared-1579783242528]: 
+    sharedcomponent: lib_AmazonLEX.Mobile_application.Application.ChatBot
+    ↓AmazonLEXBotName [mobile.components.UIControlVariable-1579787217605]: 
+      comment: The Lex Bot Name as defined in https://us-east-1.console.aws.amazon.com/lex/home
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'BankingBot'
+    ↓AmazonLEXBotAlias [mobile.components.UIControlVariable-1579787217607]: 
+      comment: The Amazon Lex Bot alias
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'BankingBot'
+    ↓class [mobile.components.UIControlVariable-1580215199346]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'chatarea chatbox'
+    ↓toUser [mobile.components.UIControlVariable-1580384054907]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'Raiffeisen'

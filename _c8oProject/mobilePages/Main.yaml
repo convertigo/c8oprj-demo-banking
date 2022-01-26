@@ -1,0 +1,52 @@
+preloadPriority: high
+segment: path-to-main
+title: Title for Main
+↓TabsContainer [mobile.components.UIDynamicElement-1579886413838]: 
+  beanData: '{"ionBean":"Tabs"}'
+  tagName: ion-tabs
+  ↓TabItem1 [mobile.components.UIDynamicTab-1579886423281]: 
+    beanData: |
+      '{
+       "ionBean": "Tab",
+       "TabTitle": "plain:Comptes",
+       "TabIcon": "plain:cash"
+      }'
+    tabpage: BankingDemo.MobileApplication.Application.Accounts
+    tagName: ion-tab
+  ↓TabItem [mobile.components.UIDynamicTab-1579886418572]: 
+    beanData: |
+      '{
+       "ionBean": "Tab",
+       "TabTitle": "plain:Balances",
+       "TabIcon": "plain:share-alt"
+      }'
+    isEnabled: false
+    tabpage: BankingDemo.MobileApplication.Application.Balances
+    tagName: ion-tab
+  ↓TabItem2 [mobile.components.UIDynamicTab-1579886425577]: 
+    beanData: |
+      '{
+       "ionBean": "Tab",
+       "TabTitle": "plain:Dialogue",
+       "TabIcon": "plain:chatbubbles"
+      }'
+    tabpage: BankingDemo.MobileApplication.Application.Chat
+    tagName: ion-tab
+  ↓TabItem3 [mobile.components.UIDynamicTab-1580142133848]: 
+    beanData: |
+      '{
+       "ionBean": "Tab",
+       "TabTitle": "plain:Alertes",
+       "TabBadge": "plain:2",
+       "TabBadgeStyle": "plain:secondary",
+       "TabIcon": "plain:notifications"
+      }'
+    tagName: ion-tab
+  ↓TabItem31 [mobile.components.UIDynamicTab-1580142144578]: 
+    beanData: |
+      '{
+       "ionBean": "Tab",
+       "TabTitle": "plain:Options",
+       "TabIcon": "plain:menu"
+      }'
+    tagName: ion-tab

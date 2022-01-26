@@ -1,0 +1,39 @@
+buildscript {
+	repositories {
+		// mavenLocal()
+		maven {
+			url "https://m2.convertigo.com"
+		}
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.convertigo:gradle-plugin:7.7.1-SNAPSHOT'
+	}
+}
+
+apply plugin: 'convertigo'
+
+// the 'load' task load and migrate the project to the current plugin version
+load {
+	// change the 'version' property of the project at loading
+	// can also be configured with a -Pconvertigo.load.projectVersion as Gradle parameter
+	projectVersion '1.0'
+	mobileApplicationEndpoint 'https://raiffeisen.convertigo.net/convertigo'
+	doLast {
+		convertigoProject.comment= 'Build by Convertigo Gadle Plugin'
+	}
+}
+
+compileMobileBuilder {
+	mode 'debug' // Or 'production' for NGC and obfuscate
+}
+
+
+export {
+	dependsOn compileMobileBuilder
+}
+
+
+car {
+	dependsOn  compileMobileBuilder
+}

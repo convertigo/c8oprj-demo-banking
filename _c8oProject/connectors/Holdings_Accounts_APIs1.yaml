@@ -1,0 +1,330 @@
+authenticationType: Basic
+baseDir: /api/v1.0.0
+https: true
+port: 443
+server: api.temenos.com
+↓_holdings_accounts__accountId__alertEvents_GET [transactions.JsonHttpTransaction]: 
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts/{accountId}/alertEvents
+  ↓accountId [variables.RequestableHttpVariable-1579701668333]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    required: true
+    value: 
+  ↓page_size [variables.RequestableHttpVariable-1579701668335]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668337]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668339]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668341]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668343]: 
+    httpName: companyId
+↓_holdings_accounts__accountId__cards_GET [transactions.JsonHttpTransaction]: 
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts/{accountId}/cards
+  ↓accountId [variables.RequestableHttpVariable-1579701668275]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    required: true
+    value: 
+  ↓cardIssueId [variables.RequestableHttpVariable-1579701668277]: 
+    comment: The identifier of the issued card, consisting of three elements. The card type, a full stop and the card number. The card type must be a valid cardType. The card number may be any alphanumeric construction, e.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222
+    description: The identifier of the issued card, consisting of three elements. The card type, a full stop and the card number. The card type must be a valid cardType. The card number may be any alphanumeric construction, e.g. VISA.1234567887654321 GC.1111222233334444 AB21.1111111122222222
+    httpName: cardIssueId
+  ↓selIssueDate [variables.RequestableHttpVariable-1579701668279]: 
+    httpName: selIssueDate
+  ↓selExpiryDate [variables.RequestableHttpVariable-1579701668281]: 
+    httpName: selExpiryDate
+  ↓selStatus [variables.RequestableHttpVariable-1579701668283]: 
+    httpName: selStatus
+  ↓page_size [variables.RequestableHttpVariable-1579701668285]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668287]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668289]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668291]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668293]: 
+    httpName: companyId
+↓_holdings_accounts__accountId__GET [transactions.JsonHttpTransaction]: 
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts/{accountId}
+  ↓accountId [variables.RequestableHttpVariable-1579701668319]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    required: true
+    value: 
+  ↓page_size [variables.RequestableHttpVariable-1579701668321]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668323]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668325]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668327]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668329]: 
+    httpName: companyId
+↓_holdings_accounts__accountId__transactions_GET [transactions.JsonHttpTransaction]: 
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts/{accountId}/transactions
+  ↓accountId [variables.RequestableHttpVariable-1579701668249]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    required: true
+    value: 
+  ↓bookingDate [variables.RequestableHttpVariable-1579701668251]: 
+    comment: The date on which the entry was generated. Normally, but not necessarily, the actual date at the time the entry is generated, e.g. if the previous day's business is still being processed after midnight, the actual date changes, but the run date is still the previous day.
+    description: The date on which the entry was generated. Normally, but not necessarily, the actual date at the time the entry is generated, e.g. if the previous day's business is still being processed after midnight, the actual date changes, but the run date is still the previous day.
+    httpName: bookingDate
+  ↓processingDate [variables.RequestableHttpVariable-1579701668253]: 
+    comment: The bank date that an accounting movement is applied to the bank GL
+    description: The bank date that an accounting movement is applied to the bank GL
+    httpName: processingDate
+  ↓valueDate [variables.RequestableHttpVariable-1579701668255]: 
+    comment: The applicable value date
+    description: The applicable value date
+    httpName: valueDate
+  ↓description [variables.RequestableHttpVariable-1579701668257]: 
+    comment: The name used for display purposes
+    description: The name used for display purposes
+    httpName: description
+  ↓reversalMarker [variables.RequestableHttpVariable-1579701668259]: 
+    httpName: reversalMarker
+  ↓includeSubAcct [variables.RequestableHttpVariable-1579701668261]: 
+    httpName: includeSubAcct
+  ↓page_size [variables.RequestableHttpVariable-1579701668263]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668265]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668267]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668269]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668271]: 
+    httpName: companyId
+↓_holdings_accounts_balances_GET [transactions.JsonHttpTransaction]: 
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts/balances
+  ↓accountId [variables.RequestableHttpVariable-1579701668297]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    httpName: accountId
+  ↓customerId [variables.RequestableHttpVariable-1579701668299]: 
+    comment: The identifier of the customer
+    description: The identifier of the customer
+    httpName: customerId
+  ↓productId [variables.RequestableHttpVariable-1579701668301]: 
+    comment: The identifier of the product
+    description: The identifier of the product
+    httpName: productId
+  ↓currencyId [variables.RequestableHttpVariable-1579701668303]: 
+    comment: The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.
+    description: The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.
+    httpName: currencyId
+  ↓limitReferenceId [variables.RequestableHttpVariable-1579701668305]: 
+    comment: The identifier of the limit reference
+    description: The identifier of the limit reference
+    httpName: limitReferenceId
+  ↓page_size [variables.RequestableHttpVariable-1579701668307]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668309]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668311]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668313]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668315]: 
+    httpName: companyId
+↓_holdings_accounts_GET [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpPool: global
+  includeDataType: false
+  subDir: /holdings/accounts
+  ↓accountId [variables.RequestableHttpVariable-1579701668227]: 
+    comment: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    description: The identifier of the account. Often referred to as the account number, yet for consistency this is always referred to as accountId.
+    httpName: accountId
+  ↓customerId [variables.RequestableHttpVariable-1579701668229]: 
+    comment: The identifier of the customer
+    description: The identifier of the customer
+    httpName: customerId
+  ↓productId [variables.RequestableHttpVariable-1579701668231]: 
+    comment: The identifier of the product
+    description: The identifier of the product
+    httpName: productId
+  ↓currencyId [variables.RequestableHttpVariable-1579701668233]: 
+    comment: The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.
+    description: The identifier of the curreny. The is the 3 letter ISO 4217 code of the currency.
+    httpName: currencyId
+  ↓limitReference [variables.RequestableHttpVariable-1579701668235]: 
+    comment: Identifies the type of limit applicable to the Account
+    description: Identifies the type of limit applicable to the Account
+    httpName: limitReference
+  ↓page_size [variables.RequestableHttpVariable-1579701668237]: 
+    comment: The total number of records per page
+    description: The total number of records per page
+    httpName: page_size
+  ↓page_start [variables.RequestableHttpVariable-1579701668239]: 
+    comment: The record from which the response should be displayed
+    description: The record from which the response should be displayed
+    httpName: page_start
+  ↓page_token [variables.RequestableHttpVariable-1579701668241]: 
+    comment: Unique id expected to get as part of response from t24 on every enquiry request.
+    description: Unique id expected to get as part of response from t24 on every enquiry request.
+    httpName: page_token
+  ↓credentials [variables.RequestableHttpVariable-1579701668243]: 
+    httpName: credentials
+  ↓companyId [variables.RequestableHttpVariable-1579701668245]: 
+    httpName: companyId

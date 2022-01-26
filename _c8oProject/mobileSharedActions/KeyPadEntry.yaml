@@ -1,0 +1,25 @@
+↓putEntry [mobile.components.UICustomAction-1580230928985]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		page.c8o.log.debug(''key value: '' + vars.value);
+          		page.c8o.log.debug(''input: '' + vars.input);
+          		if(vars.value !== " ")
+          		    page[vars.input].value += vars.value; 
+          		resolve();
+          '
+  ↓value [mobile.components.UIControlVariable-1580231209179]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.keyValue
+  ↓input [mobile.components.UIControlVariable-1580231211811]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.inputField
+↓keyValue [mobile.components.UIStackVariable-1580230942186]: 
+↓inputField [mobile.components.UIStackVariable-1580230965224]: 

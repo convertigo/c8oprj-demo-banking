@@ -1,0 +1,16 @@
+↓setFocused [mobile.components.UICustomAction-1580234471712]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+          		page.local.focusedInput = vars.input;
+          		resolve();
+          '
+  ↓input [mobile.components.UIControlVariable-1580234710356]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.inputField
+↓inputField [mobile.components.UIStackVariable-1580234688032]: 
